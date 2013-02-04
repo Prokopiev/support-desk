@@ -1,0 +1,14 @@
+Dear %%NAME%%,
+
+This e-mail contains a list of support tickets submitted with your e-mail address. Number of support tickets found: %%NUM%%
+
+%%LIST_TICKETS%%
+
+
+*НЕ ОТВЕЧАЙТЕ НА ЭТО ПИСЬМО*
+Данное письмо отправлено автоматически, системой. После ответа Вы вновь будете получать уведомления!
+
+*ЛЮБОЕ ОТПРАВЛЕННОЕ СООБЩЕНИЕ В ОТВЕТ НА ЭТО, БУДЕТ УДАЛЕНО АВТОМАТИЧЕСКИ*
+
+С уважением, автоматическая система уведомления FREEProf HELP.
+http://freeprof.ru/help
