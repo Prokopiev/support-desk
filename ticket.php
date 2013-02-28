@@ -40,6 +40,7 @@ define('HESK_NO_ROBOTS',1);
 require(HESK_PATH . 'hesk_settings.inc.php');
 require(HESK_PATH . 'inc/common.inc.php');
 require(HESK_PATH . 'inc/database.inc.php');
+require(HESK_PATH . 'memcached.config.php');
 
 /* Print header */
 require_once(HESK_PATH . 'inc/header.inc.php');
@@ -49,7 +50,7 @@ require_once(HESK_PATH . 'inc/header.inc.php');
 <table cellspacing="0" cellpadding="0" border="0" align="center" style="position: relative; left: -60px; margin-top: 46px;">
 		<tbody><tr>
 			<td valign="top" style="padding-top: 20px;">
-				<div><a href="http://www.66.ru"><img width="175" height="119" border="0" title="Современный портал Екатеринбурга - www.66.ru" alt="Современный портал Екатеринбурга - www.66.ru" src="http://img.66.ru/dez/reg2/logo.gif"></a></div>
+                <div><a href="http://<?=$memcached->get('outerHostName');?>"><img width="175" height="119" border="0" title="<?=$memcached->get('title');?> - <?=$memcached->get('siteName');?>" alt="<?=$memcached->get('title');?> - <?=$memcached->get('siteName');?>" src="<?=$memcached->get('logoRegistration');?>"></a></div>
 			</td>
 			<td width="40">&nbsp;</td>
 			<td width="660" valign="top">
@@ -59,21 +60,21 @@ require_once(HESK_PATH . 'inc/header.inc.php');
 				<table width="100%" cellspacing="0" cellpadding="0" border="0">
 					<tbody><tr>
 						<td width="21">
-							<img width="21" height="21" alt="" src="http://img.66.ru/dez/reg2/regisration_02_03.gif"></td>
-						<td style="background: url('http://img.66.ru/dez/reg2/regisration_02_04.gif') repeat-x scroll 0% 0% transparent;">
-							<img width="502" height="21" alt="" src="http://img.66.ru/dez/spacer.gif"></td>
+							<img width="21" height="21" alt="" src="/img/regisration_02_03.gif"></td>
+						<td style="background: url('/img/regisration_02_04.gif') repeat-x scroll 0% 0% transparent;">
+							<img width="502" height="21" alt="" src="/img/spacer.gif"></td>
 						<td>
-							<img width="30" height="21" alt="" src="http://img.66.ru/dez/reg2/regisration_02_05.gif"></td>
+							<img width="30" height="21" alt="" src="/img/regisration_02_05.gif"></td>
 					</tr>
 					<tr>
-						<td style="background: url('http://img.66.ru/dez/reg2/regisration_02_07.gif') repeat-y scroll 0% 0% transparent;">
-							<img width="21" height="1" alt="" src="http://img.66.ru/dez/spacer.gif"></td>							
+						<td style="background: url('/img/regisration_02_07.gif') repeat-y scroll 0% 0% transparent;">
+							<img width="21" height="1" alt="" src="/img/spacer.gif"></td>
 						<td valign="top" style="padding: 10px;" align="left">									
 				
 								
 							
 				
-							<div width="224" style="font-size: 22px; color: black;">Запрос в <a href="http://support.66.ru/" style="font-size: 22px; color: black;">техническую поддержку 66.ru</a>:</div><br><br>
+							<div width="224" style="font-size: 22px; color: black;">Запрос в <a href="/" style="font-size: 22px; color: black;">техническую поддержку <?=$memcached->get('siteName');?></a>:</div><br><br>
 							
 							
 							
@@ -436,9 +437,9 @@ if ($ticket['status'] != 3 || $hesk_settings['custopen']==1)
 	
 <table cellspacing="0" cellpadding="0" bgcolor="#ffca00" align="center" style="margin-top: 10px;">
 	<tbody><tr>
-		<td width="10"><img alt="" src="http://img.66.ru/dez/reg2/l.gif"></td>
-		<td style="background: url(&quot;http://img.66.ru/dez/reg2/bb.gif&quot;) repeat-x scroll 0% 0% transparent;"><input type="submit" style="width: 167px; height: 32px; color: rgb(87, 66, 0); padding-bottom: 5px; font-size: 14px; font-weight: bold;" value="<?php echo $hesklang['submit_reply']; ?>"></td>
-		<td width="10"><img alt="" src="http://img.66.ru/dez/reg2/r.gif"></td>
+		<td width="10"><img alt="" src="/img/l.gif"></td>
+		<td style="background: url(&quot;/img/bb.gif&quot;) repeat-x scroll 0% 0% transparent;"><input type="submit" style="width: 167px; height: 32px; color: rgb(87, 66, 0); padding-bottom: 5px; font-size: 14px; font-weight: bold;" value="<?php echo $hesklang['submit_reply']; ?>"></td>
+		<td width="10"><img alt="" src="/img/r.gif"></td>
 	</tr>
 </tbody></table>		
 	
@@ -456,16 +457,16 @@ if ($ticket['status'] != 3 || $hesk_settings['custopen']==1)
 							
 							
 						</td>
-						<td style="background: url('http://img.66.ru/dez/reg2/regisration_02_09.gif') repeat-y scroll 0% 0% transparent;">
-							<img width="30" height="1" alt="" src="http://img.66.ru/dez/spacer.gif"></td>
+						<td style="background: url('/img/regisration_02_09.gif') repeat-y scroll 0% 0% transparent;">
+							<img width="30" height="1" alt="" src="/img/spacer.gif"></td>
 					</tr>
 					<tr>
 						<td width="21">
-							<img width="21" height="27" alt="" src="http://img.66.ru/dez/reg2/regisration_02_10.gif"></td>
-						<td style="background: url('http://img.66.ru/dez/reg2/regisration_02_11.gif') repeat-x scroll 0% 0% transparent;">
-							<img width="502" height="27" alt="" src="http://img.66.ru/dez/spacer.gif"></td>
+							<img width="21" height="27" alt="" src="/img/regisration_02_10.gif"></td>
+						<td style="background: url('/img/regisration_02_11.gif') repeat-x scroll 0% 0% transparent;">
+							<img width="502" height="27" alt="" src="/img/spacer.gif"></td>
 						<td>
-							<img width="30" height="27" alt="" src="http://img.66.ru/dez/reg2/regisration_02_12.gif"></td>
+							<img width="30" height="27" alt="" src="/img/regisration_02_12.gif"></td>
 					</tr>
 				</tbody></table>
 
